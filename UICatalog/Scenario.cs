@@ -246,7 +246,16 @@ namespace UICatalog
         /// </summary>
         public static List<Type> GetDerivedClasses<T>()
         {
-            List<Type> objects = new List<Type> ();
+            List<Type> objects  = new List<Type> ();
+
+            #region 아래보다는 이렇게 작성하여 읽기쉬운 코드 작성할것.
+
+            Type[] allTypes     = typeof( T ).Assembly.GetTypes(); 
+            //Type[] subTypes     = allTypes.Where( t => t.IsClass && !t.IsAbstract && t.IsSubclassOf( typeof( T ) ) ).ToArray() ;
+            List<Type> subTypes = allTypes.Where( t => t.IsClass && !t.IsAbstract && t.IsSubclassOf( typeof( T ) ) ).ToList() ;
+            //return subTypes;
+
+            #endregion
 
             foreach ( Type type in typeof( T ).Assembly.GetTypes()
              .Where( myType => myType.IsClass && !myType.IsAbstract && myType.IsSubclassOf( typeof( T ) ) ) )
