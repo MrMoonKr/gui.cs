@@ -6,6 +6,11 @@
 [![License](https://img.shields.io/github/license/migueldeicaza/gui.cs.svg)](LICENSE)
 ![Bugs](https://img.shields.io/github/issues/migueldeicaza/gui.cs/bug)
 
+# 공고
+* 한글 주석을 달면서 전체 모듈 분석용입니다.
+* 실재 사용은 원본 모듈 사용하세요.
+* 신입 교육용으로 포크하였습니다.
+
 # Terminal.Gui - Cross Platform Terminal GUI toolkit for .NET
 
 A toolkit for building console GUI apps for .NET, .NET Core, and Mono that works on Windows, the Mac, and Linux/Unix.
